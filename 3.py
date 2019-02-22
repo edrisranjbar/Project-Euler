@@ -1,11 +1,11 @@
 def factorsOf (number):
     factors = []
-    for i in range(1,number+1):
+    for i in range(1,(number+1)/2):
         if number % i == 0 :
             factors.append(i)
-    print ("Factors of {} is/are {}".format(number,factors))
+    factors.append(number)
+    # print ("Factors of {} is/are {}".format(number,factors))
     return factors
-
 def isPrime(x):
 	if x >= 2:
 		for y in range(2, x):
@@ -14,8 +14,7 @@ def isPrime(x):
 	else:
 		return False
 	return True
-
-number = 600851475143
+number = 900000000
 factors = factorsOf(number)
 primeFactors = []
 for factor in factors:
